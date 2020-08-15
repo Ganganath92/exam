@@ -6,6 +6,20 @@ use SilverStripe\Assets\Image;
 
 class Customer extends DataObject {
 
+
+
+	//Ganganath Gunawardane - item 1
+    public function getCMSFields() {
+
+		$fields = parent::getCMSFields();
+        if($grid = $fields->dataFieldByName('HostingContracts')){
+            $grid->getConfig()
+                ->removeComponentsByType('SilverStripe\Forms\GridField\GridFieldImportButton');
+		}
+        return $fields;
+	}
+    //Ganganath Gunawardane - item 1
+
     private static $db = array(
 		'FirstName' => 'Varchar',
 		'Surname' => 'Varchar',

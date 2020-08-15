@@ -7,6 +7,20 @@ use SilverStripe\Admin\ModelAdmin;
 
 class MyCRMAdmin extends ModelAdmin {
 
+    //Ganganath Gunawardane - item 1
+    public function getEditForm($id = null, $fields = null) {
+        $form = parent::getEditForm($id, $fields);
+
+        if($this->modelClass == 'Customer') {
+            $form->Fields()
+                ->fieldByName($this->sanitiseClassName($this->modelClass))
+                ->getConfig()
+                ->removeComponentsByType('SilverStripe\Forms\GridField\GridFieldImportButton');
+        }
+        return $form;
+    }
+    //Ganganath Gunawardane - item 1
+
 	private static $managed_models = array(
         Customer::class,
         HostingContract::class,
