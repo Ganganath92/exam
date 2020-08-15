@@ -2,6 +2,7 @@
 
 use SilverStripe\ORM\DataObject;
 use SilverStripe\Assets\Image;
+use SilverStripe\Forms\EmailField;
 // use HostingContract;
 
 class Customer extends DataObject {
@@ -10,8 +11,13 @@ class Customer extends DataObject {
 
 	//Ganganath Gunawardane - item 1
     public function getCMSFields() {
-
+        
 		$fields = parent::getCMSFields();
+
+		//Ganganath Gunawardane - item 5
+		$fields->replaceField('Email', EmailField::create('Email','Email'));
+		//Ganganath Gunawardane - item 5
+
         if($grid = $fields->dataFieldByName('HostingContracts')){
             $grid->getConfig()
                 ->removeComponentsByType('SilverStripe\Forms\GridField\GridFieldImportButton');
