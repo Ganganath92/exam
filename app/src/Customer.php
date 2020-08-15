@@ -46,10 +46,12 @@ class Customer extends DataObject {
 		'Surname',
 		'CustomerType'
 	);
-
+	//Ganganath Gunawardane - item 6
     private static $searchable_fields = array(
 		'FirstName',
 		'Surname',
-		'HostingContracts.ContractNumber'
+		'HostingContracts.ContractNumber',
+		'HostingContracts.HostingType.Title'
 	);
+	//Ganganath Gunawardane - item 6
 }
