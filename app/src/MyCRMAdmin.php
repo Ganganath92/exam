@@ -12,12 +12,18 @@ class MyCRMAdmin extends ModelAdmin {
         $form = parent::getEditForm($id, $fields);
 
         if($this->modelClass == 'Customer') {
-            // Ganganath Gunawardane  - item 2
+            // Ganganath Gunawardane  - item 3
             $form->Fields()
                 ->fieldByName($this->sanitiseClassName($this->modelClass))
-                ->getConfig()->getComponentByType('SilverStripe\Forms\GridField\GridFieldPaginator')->setItemsPerPage(10);
-            // Ganganath Gunawardane  - item 2
+                ->setTitle('Client');
+            // Ganganath Gunawardane  - item 3
 
+             // Ganganath Gunawardane  - item 2
+             $form->Fields()
+             ->fieldByName($this->sanitiseClassName($this->modelClass))
+             ->getConfig()->getComponentByType('SilverStripe\Forms\GridField\GridFieldPaginator')->setItemsPerPage(10);
+            // Ganganath Gunawardane  - item 2
+           
             $form->Fields()
                 ->fieldByName($this->sanitiseClassName($this->modelClass))
                 ->getConfig()
