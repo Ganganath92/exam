@@ -61,22 +61,7 @@ class ContactPageController extends PageController
         $ContactPage->Message = $data['Message'];
         $ContactPage->write();
 
-        $email = new Email(); 
-         
-        $email->setTo('ganganathupul@gmail.com'); 
-        $email->setFrom($data['Email']); 
-        $email->setSubject("Contact Message from {$data["Name"]}"); 
-         
-        $messageBody = " 
-            <p><strong>Name:</strong> {$data['Name']}</p> 
-            <p><strong>Message:</strong> {$data['Message']}</p> 
-        "; 
-        $email->setBody($messageBody); 
-        $email->send(); 
-        return [
-            'Content' => '<p>Thank you for your feedback.</p>',
-            'Form' => ''
-        ];
+      
     }
 }
  //Ganganath Gunawardane - item 9, 10
