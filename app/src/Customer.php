@@ -36,11 +36,12 @@ class Customer extends DataObject {
     private static $has_one = array(
 		'Avatar' => Image::class,
 	);
-
+//Ganganath Gunawardane - item 8
     private static $has_many = array(
 		'HostingContracts' => HostingContract::class,
+		'Transaction' => Transaction::class,
 	);
-
+//Ganganath Gunawardane - item 8 
     private static $summary_fields = array(
 		'FirstName',
 		'Surname',

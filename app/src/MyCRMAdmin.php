@@ -33,13 +33,15 @@ class MyCRMAdmin extends ModelAdmin {
     }
     //Ganganath Gunawardane - item 1
 
-
+  //Ganganath Gunawardane - item 8 ,9, 10
 	private static $managed_models = array(
         Customer::class,
         HostingContract::class,
-        HostingType::class
+        HostingType::class,
+        ContactPage::class,
+        Transaction::class
 	);
-
+//Ganganath Gunawardane - item 8
     private static $url_segment = 'mycrm';
     private static $menu_title = 'My CRM';
 
