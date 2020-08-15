@@ -1,7 +1,7 @@
 <?php
 
 use SilverStripe\ORM\DataObject;
-use HostingContract;
+// use HostingContract;
 use SilverStripe\Forms\RequiredFields;
 
 class HostingType extends DataObject {
